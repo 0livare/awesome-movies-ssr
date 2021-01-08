@@ -3,6 +3,7 @@ import Head from 'next/head'
 import {Movie} from '../components'
 import {addQuery} from '../util'
 import styles from '../styles/[mid].module.css'
+import SearchBox from '../components/search-box'
 
 export default function MovieList({data}) {
   return (
@@ -11,6 +12,8 @@ export default function MovieList({data}) {
         <title>Zach's favorite movies</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
+
+      <SearchBox />
 
       <div className={styles.movieWrapper}>
         {data.Search.map(movieData => (
